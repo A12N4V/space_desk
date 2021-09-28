@@ -1,4 +1,4 @@
-var input = `world is divided in ideal.The atmosphere is 30% Oxyegen.genome is discovered.beginning of the universe is known.religious debates are active while science is passive due to knowing the beginning of the universe.they themselves are sentient AI.space travel is nil for last two centuary`;
+var input = `what is your name?`;
 
 var markov = {
     memory    : [],
