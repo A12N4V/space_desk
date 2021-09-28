@@ -1,21 +1,140 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Space Desk Popup</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'><link rel="stylesheet" href="./style.css">
+	<meta charset="utf-8">
+	<title>About you</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html {
+		  font-size: 18px;
+		}
+		body {
+			background-color: black;
+			color: green;
+			font-family: 'Press Start 2P', cursive;}
+		select {
+			font-family: 'Press Start 2P';
+			padding: 1em;
+			width: 60%;
+			border-radius: .2em;
+			border: 1px solid #acacac;
+			color: green;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-ms-appearance: none;
+			background: url(https://www.thrivingparish.org/wp-content/uploads/2018/01/white-down-arrow-png-2.png);
+			background-color: black;
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			background-position: right;
+			background-origin: content-box;}
+		.modal {
+		  position: relative;
+		  left: 50%;
+		  top: 50%;
+		  transform: translate(-50%, -50%);
+		  width: auto;
+		  display: inline-flex;
+		  flex-direction: column;
+		  align-items: center;
+		  padding: 1.6rem 3rem;
+		  border: 3px solid black;
+		  border-radius: 5px;
+		  background: green;
+		/*   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2); */
+		}
+		.message {
+		  font-size:1.1rem;
+		  margin-bottom: 1.6rem;
+		  margin-top: 0;
+		  color: white;
+		}
+		.btn {
+		  color:black;
+		    font-family:inherit;
+		  font-size: inherit;
+		  background: white;
+		  padding: 0.3rem 3.4rem;
+		  border: 3px solid black;
+		  margin-right: 2.6rem;
+		  box-shadow: 0 0 0 black;
+		  transition: all 0.2s;
+		}
 
+		.btn:last-child {
+		  margin: 0;
+		}
+
+		.btn:hover {
+		  box-shadow: 0.4rem 0.4rem 0 black;
+		  transform: translate(-0.4rem, -0.4rem);
+		}
+
+		.btn:active {
+		  box-shadow: 0 0 0 black;
+		  transform: translate(0, 0);
+		}
+
+		.options {
+		  display: flex;
+		  flex-direction: row;
+		  justify-content: space-between;
+		}
+
+	</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="modal">
-  <p class="message">Do you want to start intercepting messages from space?</p>
-  <div class="options">
-    <button class="btn" onclick="parent.location='./story/index.html'">Yes</button>
-    <button class="btn" onclick="window.close();">No</button>
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://codepen.io/Gthibaud/pen/dybzvNw.js'></script>
+	<div>
+		<h1>About you</h1>
+		<hr>
+		<form>
+			<label>Planet Name:</label>
+			<select class="planet_selected">  
+				<option value = "none"> none 
+				</option>  
+				<option value = "ceoed"> ceoed 
+				</option>  
+				<option value = "dendro"> dendro  
+				</option>  
+				<option value = "metaao"> metaao
+			</select>  
+		</form>
+		<hr>
+		<h2>Planet Informtion</h2>
+		<p id="planet_info"></p>
+		<hr>
+		<h3>Your name:<span class="name"></span></h3>
+		<hr>
+		<hr>
+		<br><br><br>
+		<div class="modal">
+		   <p class="message">Do you want to start intercepting messages from space?</p>
+		  <div class="options">
+		    <button class="btn" onclick="parent.location='./r-mi-s-pop-up/index.html'">Yes</button>
+		    <button class="btn" onclick="window.close();">No</button>
+		  </div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		const planet_info = $('.planet_selected').change(function(){
+			const properties_collection=["World is divided in races, genders and religion. The atmosphere is 40% Oxygen. Genome not discovered. Beginning of the universe is unknown. Religion is valued above science. Sentient AI is made. Space travel has been nil for 2 decades","Species is united as one with galactic unification as goal. The atmosphere is 30% Oxygen. Genome has been discovered. Beginning of the universe is unknown. Religion has been demolished for unification. Sentient Ai is made. Space travel is active", "World is divided in ideals.The atmosphere is 30% Oxyegen. Genome is discovered. Beginning of the universe is known. Religious debates are active while scienctific research is passive due to knowing the beginning of the universe. They themselves are sentient AI.Space travel is nil for last two centuary"]
+			planet_selected=$(this).val();
+			info_display=$('#planet_info');
+			if (planet_selected=="ceoed"){
+				info_display.text(properties_collection[0]);
+				$('.name').text("bese")
+			} else if (planet_selected=="dendro"){
+				info_display.text(properties_collection[1]);
+				$('.name').text("denro1019")
+			} else if (planet_selected=="metaao"){
+				info_display.text(properties_collection[2]);
+				$('.name').text("itacis")
+			}
+		});
+	</script>
 </body>
 </html>
