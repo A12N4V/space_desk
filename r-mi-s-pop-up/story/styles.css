@@ -16,6 +16,7 @@ html {
   background-repeat: no-repeat;
 }
 #wrapper {
+  font-family:'Press Start 2P', cursive;
   margin:50px auto 20px;
   width:80%;
   max-width:600px;
@@ -33,6 +34,7 @@ html {
   margin-bottom:0px;
 }
 #result{
+  font-family:'Press Start 2P', cursive;
   margin:auto;
   width:100%;
   max-width:600px;
