@@ -71,7 +71,7 @@ html {
 	box-shadow: green 0 0 0 40px inset;
 }
 .modal {
-  position: center;
+  position: sticky;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
