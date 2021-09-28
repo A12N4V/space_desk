@@ -36,11 +36,10 @@ html {
 }
 #result{
   text-align: center;
-  text-weight:900;
   width:100%;
   max-width:600px;
   padding:20px 0px 10px;
-  font-size:1.4rem;
+  font-size:10px;
   line-height:1.3em
 }
 .enc{
