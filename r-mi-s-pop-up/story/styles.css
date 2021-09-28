@@ -35,8 +35,8 @@ html {
   margin-bottom:0px;
 }
 #result{
-  font-family:'Press Start 2P', cursive;
-  margin:auto;
+  text-align: center;
+  text-weight:900;
   width:100%;
   max-width:600px;
   padding:20px 0px 10px;
