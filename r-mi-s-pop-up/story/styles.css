@@ -71,7 +71,7 @@ html {
 	box-shadow: green 0 0 0 40px inset;
 }
 .modal {
-  position: absolute;
+  position: center;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -83,7 +83,7 @@ html {
   border: 3px solid black;
   border-radius: 5px;
   background: green;
-/*   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2); */
+/*   box-shadow: 8px 8px 0 rgba(1, 1, 1, 0.2); */
 }
 .btn {
   color:black;
