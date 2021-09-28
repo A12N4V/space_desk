@@ -70,3 +70,14 @@ html {
 	color: #fff;
 	box-shadow: green 0 0 0 40px inset;
 }
+.btn {
+  color:black;
+    font-family:inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+}
