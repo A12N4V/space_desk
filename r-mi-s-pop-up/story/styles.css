@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Antic+Slab");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 html {
   height:100vh;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-  font-family: Courier, monospace;
+  font-family: 'Press Start 2P', cursive;
   font-smoothing: antialiased;
   margin: 0.8em 0;
   font-size: 18px;
