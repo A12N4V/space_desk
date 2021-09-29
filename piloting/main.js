@@ -8,9 +8,8 @@ const gameBoard=document.getElementById('game-board');
 
 function main(currentTime){
   if(gameOver){
-    if(confirm('You lost.Press ok to restart')){window.location="https://a12n4v.github.io/space_desk/piloting/index.html"}$
+    if(confirm('You lost.Press ok to restart')){window.location="https://a12n4v.github.io/space_desk/piloting/index.html"}return
   }
-
   window.requestAnimationFrame(main);
   const secondsSinceLastRender=(currentTime-lastRenderTime)/1000;
   if(secondsSinceLastRender<1/SPACESHIP_SPEED)return
