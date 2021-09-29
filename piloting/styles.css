@@ -20,10 +20,10 @@ body {
 
 .spaceship {
   background-color: green;
-  border: .25vmin solid white;
+  border: .25vmin solid black;
 }
 
 .asteroid {
   background-color: yellow;
-  border: .25vmin solid white;
+  border: .25vmin solid black;
 }
