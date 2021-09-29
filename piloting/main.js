@@ -13,7 +13,7 @@ function main(currentTime){
 
   window.requestAnimationFrame(main);
   const secondsSinceLastRender=(currentTime-lastRenderTime)/1000;
-  if(secondsSinceLastRender<1/SNAKE_SPEED)return
+  if(secondsSinceLastRender<1/SPACESHIP_SPEED)return
   lastRenderTime=currentTime
   update()
   draw()
