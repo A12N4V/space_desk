@@ -1,150 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	<meta charset="utf-8">
-	<title>About you</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet"> 
-	<style type="text/css">
-		html {
-		  font-size: 18px;
-		}
-		body {
-			background-color: black;
-			color: white;
-			font-family: 'Exo 2',sans-serif}
-		select {
-			font-family: 'Exo 2',sans-serif;
-			padding: 1em;
-			width: 60%;
-			border-radius: .2em;
-			border: 1px solid #acacac;
-			color: white;
-			appearance: none;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			-ms-appearance: none;
-			background: url(https://www.thrivingparish.org/wp-content/uploads/2018/01/white-down-arrow-png-2.png);
-			background-color: black;
-			background-repeat: no-repeat;
-			background-size: 15px 15px;
-			background-position: right;
-			background-origin: content-box;}
-		.modal {
-		  position: relative;
-		  left: 50%;
-		  top: 50%;
-		  transform: translate(-50%, -50%);
-		  width: auto;
-		  display: inline-flex;
-		  flex-direction: column;
-		  align-items: center;
-		  padding: 1.6rem 3rem;
-		  border: 3px solid white;
-		  border-radius: 5px;
-		  background: green;
-		/*   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2); */
-		}
-		.message {
-		  font-family:sans-serif;
-		  font-size:1.3rem;
-		  margin-bottom: 1.6rem;
-		  margin-top: 0;
-		  color: black;
-		}
-		options {
-		    display: flex;
-		    flex-direction: row;
-		    justify-content: space-between;
-		}
-		.btn {
-		  color:black;
-		  font-family:1rm;
-		  font-size: inherit;
-		  background: white;
-		  padding: 0.3rem 3.4rem;
-		  border: 3px solid black;
-		  margin-right: 2.6rem;
-		  box-shadow: 0 0 0 black;
-		  transition: all 0.2s;
-		}
+  <meta charset="UTF-8">
+  <title>Choose</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap');
+	.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Exo 2',sans-serif;
+	position: absolute;
+  margin-top: 10em;
+  left: 90%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 60px; width: 250px;
+	border: 1px solid white;
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+	text-transform: uppercase;
+	background: green;
+	cursor: pointer;
+	transition: all .15s;
+	user-select: none;
+}
 
-		.btn:last-child {
-		  margin: 0;
-		}
+.btn:before {
+	position: absolute;
+	top: 50%; left: 50%;
+	content: '';
+	height: 100%;
+	width: calc(100% - 20px);
+	border-top: 4px solid #000;
+	border-bottom: 4px solid #000;
+	transform: translateX(-50%) translateY(-50%);
+	transition: width .15s;
+}
+.btn:after {
+	position: absolute;
+	top: 50%; left: 50%;
+	content: '';
+	height: calc(100% - 20px);
+	width: 100%;
+	border-left: 4px solid #000;
+	border-right: 4px solid #000;
+	transform: translateX(-50%) translateY(-50%);
+	transition: height .15s;
+}
 
-		.btn:hover {
-		  box-shadow: 0.4rem 0.4rem 0 black;
-		  transform: translate(-0.4rem, -0.4rem);
-		}
+.btn:hover {
+	border-width: 4px;
+	background: darkgreen;
+}
+.btn:hover:before, div:hover:after {border-width: 4px;}
 
-		.btn:active {
-		  box-shadow: 0 0 0 black;
-		  transform: translate(0, 0);
-		}
+.btn:active {
+	border-width: 4px;
+	transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
+.btn:active:before {width: 0;}
+.btn:active:after {border-width: 4px;}
 
-		.options {
-		  display: flex;
-		  flex-direction: row;
-		  justify-content: space-between;
-		}
 
-	</style>
+/*Button 2*/
+.btn2 {
+	top: calc(50% + 75px);
+}
+.btn2:active:before {
+	width: calc(100% - 20px);
+}
+.btn2:active:after {
+	height: 0;
+}
+
+/*Button 3*/
+.btn3 {
+	top: calc(50% + 150px);
+}
+.btn3:active:before {width: 0;}
+.btn3:active:after {height: 0;}
+
+
+/* btn4 - btn small */
+.btn.small {
+	height: 60px;
+	width: 60px;
+	font-size: 20px;
+}
+</style>
 </head>
-<body>
-	<div>
-		<h1>About you in the simulation</h1>
-		<hr>
-		<form>
-			<label>Planet Name| </label>
-			<select class="planet_selected">  
-				<option value = "none"> none 
-				</option>  
-				<option value = "ceoed"> ceoed 
-				</option>  
-				<option value = "dendro"> dendro  
-				</option>  
-				<option value = "metaao"> metaao
-			</select>  
-		</form>
-		<hr>
-		<h2>Planet Informtion</h2>
-		<p id="planet_info"></p>
-		<hr>
-		<h3>Your name| <span class="name"></span></h3>
-		<hr>
-		<hr>
-		<br><br><br><br><br>
-		<div class="modal">
-			
-		   <p class="message">Do you want to start intercepting messages from space?</p>
-		  <div class="options">
-		    <button class="btn" onclick="parent.location='./story/index.html'">Yes</button>
-		    <button class="btn" onclick="window.close();">No</button>
-		  </div>
-		</div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		const planet_info = $('.planet_selected').change(function(){
-			const properties_collection=["World is divided in races, genders and religion. The atmosphere is 40% Oxygen. Genome not discovered. Beginning of the universe is unknown. Religion is valued above science. Sentient AI is made. Space travel has been nil for 2 decades","Species is united as one with galactic unification as goal. The atmosphere is 30% Oxygen. Genome has been discovered. Beginning of the universe is unknown. Religion has been demolished for unification. Sentient Ai is made. Space travel is active", "World is divided in ideals.The atmosphere is 30% Oxyegen. Genome is discovered. Beginning of the universe is known. Religious debates are active while scienctific research is passive due to knowing the beginning of the universe. They themselves are sentient AI.Space travel is nil for last two centuary"]
-			planet_selected=$(this).val();
-			info_display=$('#planet_info');
-			if (planet_selected=="ceoed"){
-				info_display.text(properties_collection[0]);
-				$('.name').text("bese")
-			} else if (planet_selected=="dendro"){
-				info_display.text(properties_collection[1]);
-				$('.name').text("denro1019")
-			} else if (planet_selected=="metaao"){
-				info_display.text(properties_collection[2]);
-				$('.name').text("itacis")
-			} else {
-				info_display.text("Please choose a choice")
-				$('.name').text("please choose a choice")
-			}
-		});
-	</script>
+<body onload="alert('Choose your appropriate planet to start!');">
+<!-- partial:index.partial.html -->
+<div class="col-md-5 text-left technical-text">
+  <div class="data-sub-competence" id="codexateur">
+    <h4>PLANET: CEOED; YOUR NAME: BESE</h4>
+    <p>World is divided in races, genders and religion. The atmosphere is 40% Oxygen. Genome not discovered. Beginning of the universe is unknown. Religion is valued above science. Sentient AI is made. Space travel has been nil for 2 decades
+    </p>
+    <button class="close-sub-modal"></button>
+  </div>
+
+  <div class="data-sub-competence" id="resorbug">
+    <h4>PLANET: DENDRO; YOUR NAME: DENDRO1019</h4>
+    <p>Species is united as one with galactic unification as goal. The atmosphere is 30% Oxygen. Genome has been discovered. Beginning of the universe is unknown. Religion has been demolished for unification. Sentient Ai is made. Space travel is active
+    </p>
+    <button class="close-sub-modal"></button>
+  </div>
+
+  <div class="data-sub-competence" id="technovateur">
+    <h4>PLANET: METAAO; YOUR NAME: ITACIS</h4>
+    <p>World is divided in ideals.The atmosphere is 30% Oxyegen. Genome is discovered. Beginning of the universe is known. Religious debates are active while scienctific research is passive due to knowing the beginning of the universe. They themselves are sentient AI.Space travel is nil for last two centuary.
+    </p>
+    <button class="close-sub-modal"></button>
+  </div>
+
+  <svg class="sub-competence visible-lg inactive" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="-20 -10 704 475" xml:space="preserve">
+    <defs>
+      <filter id="blurcode" filterUnits="userSpaceOnUse">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+      </filter>
+    </defs>
+    <path class="sub-background" d="M661.3,426.5c0,14.5-8.2,26-18.4,26H25.2c-10.2,0-18.4-11.6-18.4-26V29.4 c0-14.5,8.2-26,18.4-26h617.7c10.2,0,18.4,11.6,18.4,26L661.3,426.5z"
+          />
+    <g class="sub-decoration">
+      <path class="sub-shapeWithHex" d="M10.7,427.2H0v28h49v-10.4h8.6v-23.5c0,0-28.2-19-42.4-62h-4.5V427.2z M44.1,433.8 c0,8.1-6.6,14.7-14.7,14.7s-14.7-6.6-14.7-14.7c0-8.1,6.6-14.7,14.7-14.7c0,0,0,0,0,0C37.5,419,44.1,425.6,44.1,433.8z"
+            />
+      <path class="sub-hexagon" d="M38.2,438.7v-9.9l-8.6-4.9l-8.5,4.9v9.9l8.5,4.9L38.2,438.7z" />
+      <g class="sub-loading" transform="translate(679.5 468.5) rotate(-90)">
+        <rect x="437.3" y="-71.7" transform="matrix(-2.535182e-06 -1 1 -2.535182e-06 504.5591 373.4579)" width="3.5" height="12.3"
+              />
+        <rect x="437.3" y="-77.5" transform="matrix(-2.535182e-06 -1 1 -2.535182e-06 510.3591 367.6578)" width="3.5" height="12.3"
+              />
+        <rect x="437.3" y="-83.3" transform="matrix(-2.535182e-06 -1 1 -2.535182e-06 516.1591 361.8578)" width="3.5" height="12.3"
+              />
+        <rect x="437.3" y="-89.1" transform="matrix(-2.535182e-06 -1 1 -2.535182e-06 521.9591 356.0578)" width="3.5" height="12.3"
+              />
+      </g>
+      <g class="sub-globe" transform="translate(677.1 804.795)">
+        <circle cx="-85.8" cy="-397.7" r="22.8" />
+        <ellipse cx="-85.8" cy="-397.7" rx="17.8" ry="22.8" />
+        <ellipse cx="-85.8" cy="-397.7" rx="12.6" ry="22.8" />
+        <ellipse cx="-85.8" cy="-397.7" rx="6.7" ry="22.8" />
+        <line x1="-85.8" y1="-420.5" x2="-85.8" y2="-374.9" />
+        <ellipse cx="-85.8" cy="-397.7" rx="22.8" ry="17.8" />
+        <ellipse cx="-85.8" cy="-397.7" rx="22.8" ry="12.6" />
+        <ellipse cx="-85.8" cy="-397.7" rx="22.8" ry="6.7" />
+        <line x1="-108.6" y1="-397.7" x2="-63" y2="-397.7" />
+      </g>
+    </g>
+    <path class="sub-arc right glow" filter="url(#blurcode)" d="M642.7,3c10.2,0,18.4,11.6,18.4,26v397.1c0,14.5-8.2,26-18.4,26"
+          />
+    <path class="sub-arc right" d="M642.7,3c10.2,0,18.4,11.6,18.4,26v397.1c0,14.5-8.2,26-18.4,26" />
+    <path class="sub-arc left glow" filter="url(#blurcode)" d="M25,452.5c-10.2,0-18.4-11.6-18.4-26V29.4c0-14.5,8.2-26,18.4-26"
+          />
+    <path class="sub-arc left" d="M25,452.5c-10.2,0-18.4-11.6-18.4-26V29.4c0-14.5,8.2-26,18.4-26" />
+  </svg>
+</div>
+<div class="col-md-6 technical">
+  <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 2044 2560">
+    <a data-sub-competence="#codexateur" href="#">
+      <polygon transform="translate(1200, 550) scale(0.5)" points="173.27 150.2 173.27 50.45 86.89 0.58 0.5 50.45 0.5 150.2 86.89 200.08 173.27 150.2"
+               />
+    </a>
+    <a data-sub-competence="#resorbug" href="#">
+      <polygon transform="translate(1260, 990) scale(0.5)" points="173.27 150.2 173.27 50.45 86.89 0.58 0.5 50.45 0.5 150.2 86.89 200.08 173.27 150.2"
+               />
+    </a>
+    <a data-sub-competence="#technovateur" href="#">
+      <polygon transform="translate(1110, 1690) scale(0.5)" points="173.27 150.2 173.27 50.45 86.89 0.58 0.5 50.45 0.5 150.2 86.89 200.08 173.27 150.2"
+               />
+    </a>
+  </svg>
+</div>
+<div class="btn btn2" onclick="location.assign('../r-mi-s-pop-up/story')"><span>Continue<span></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/AttrPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineLite.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
