@@ -34,5 +34,5 @@ function draw(){
 }
 
 function checkDeath(){
-  gameOver=outsideGrid(getSpaceshipHead())||spaceshipIntersection()
+  gameOver=outsideGrid(getspaceshipHead())||spaceshipIntersection()
 }
