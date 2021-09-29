@@ -24,6 +24,6 @@ body {
 }
 
 .asteroid {
-  background-color: red;
+  background-color: yellow;
   border: .25vmin solid black;
 }
