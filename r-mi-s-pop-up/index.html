@@ -53,66 +53,17 @@
 		  margin-top: 0;
 		  color: black;
 		}
-		.btn {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 50%; left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			height: 60px; width: 250px;
-			border: 1px solid white;
-			color: #fff;
-			font-weight: bold;
-			font-size: 25px;
-			text-transform: uppercase;
-			background: green;
-			cursor: pointer;
-			transition: all .15s;
-			user-select: none;
+		btn {
+			    color: black;
+			    font-family: inherit;
+			    font-size: inherit;
+			    background: white;
+			    padding: 0.3rem 3.4rem;
+			    border: 3px solid black;
+			    margin-right: 2.6rem;
+			    box-shadow: 0 0 0 black;
+			    transition: all 0.2s;
 		}
-
-	.btn:before {
-		position: absolute;
-		top: 50%; left: 50%;
-		content: '';
-		height: 100%;
-		width: calc(100% - 20px);
-		border-top: 4px solid #000;
-		border-bottom: 4px solid #000;
-		transform: translateX(-50%) translateY(-50%);
-		transition: width .15s;
-	}
-	.btn:after {
-		position: absolute;
-		top: 50%; left: 50%;
-		content: '';
-		height: calc(100% - 20px);
-		width: 100%;
-		border-left: 4px solid #000;
-		border-right: 4px solid #000;
-		transform: translateX(-50%) translateY(-50%);
-		transition: height .15s;
-	}
-
-	.btn:hover {
-		border-width: 4px;
-		background: darkgreen;
-	}
-	.btn:hover:before, div:hover:after {border-width: 4px;}
-
-	.btn:active {
-		border-width: 4px;
-		transform: translateX(-50%) translateY(-50%) scale(0.9);
-	}
-	.btn:active:before {width: 0;}
-	.btn:active:after {border-width: 4px;}
-			.options {
-			  display: flex;
-			  flex-direction: row;
-			  justify-content: space-between;
-			}
-
 	</style>
 </head>
 <body>
@@ -140,6 +91,7 @@
 		<hr>
 		<br><br><br><br><br>
 		<div class="modal">
+			
 		   <p class="message">Do you want to start intercepting messages from space?</p>
 		  <div class="options">
 		    <button class="btn" onclick="parent.location='./story/index.html'">Yes</button>
