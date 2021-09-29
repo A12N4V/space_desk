@@ -1,4 +1,4 @@
-import{update as updateSpaceship,draw as drawSpaceship,SPACESHIP_SPEED, getSpaceshipHead,spaceshipIntersection}from'./spaceship.js'
+import{update as updateSpaceship,draw as drawSpaceship,SPACESHIP_SPEED, getspaceshipHead,spaceshipIntersection}from'./spaceship.js'
 import{update as updateAsteroid,draw as drawAsteroid}from'./asteroid.js'
 import{outsideGrid}from'./grid.js'
 
