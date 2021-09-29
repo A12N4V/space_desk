@@ -1,4 +1,4 @@
-var input = `what is your name.`;
+var input = ``;
 
 var markov = {
     memory    : [],
