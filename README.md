@@ -1,2 +1,2 @@
 # space desk
-space desk is a simulation where the player is a transmission's reciever and listens stories of aliens from different planets
+space desk is a space simulation where player can have a experience as a simulated alien and can decode messages. 
