@@ -429,4 +429,4 @@ new Vue({
     spaceWorld(document.getElementById('starfield'));
   } });
 
-setTimeout(function(){location.assign('../index.html') }, 15000);
+setTimeout(function(){location.assign('../index.html') }, 13000);
