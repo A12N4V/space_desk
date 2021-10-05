@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+}
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 350%;
+  font-weight: normal;
+  letter-spacing: 0.5rem;
+}
+.char {
+  color: #fff;
+  transition: color ease-out 0.3s, text-shadow ease-out 0.3s;
+  text-shadow: 0 0 4rem #fff;
+}
+.char.fade-in {
+  color: #0cf;
+  transition: color ease-out 0.3s, text-shadow ease-out 0.3s;
+  text-shadow: 0 0 1rem #0cf;
+}

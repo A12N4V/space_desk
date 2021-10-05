@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Warp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dosis:200'><link rel="stylesheet" href="./style.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap');
+    .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo 2',sans-serif;
+    position: absolute;
+    margin-top: 10em;
+    left: 90%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 60px; width: 250px;
+    border: 1px solid white;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    background: green;
+    cursor: pointer;
+    transition: all .15s;
+    user-select: none;
+  }
+  
+  .btn:before {
+    position: absolute;
+    top: 50%; left: 50%;
+    content: '';
+    height: 100%;
+    width: calc(100% - 20px);
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    transform: translateX(-50%) translateY(-50%);
+    transition: width .15s;
+  }
+  .btn:after {
+    position: absolute;
+    top: 50%; left: 50%;
+    content: '';
+    height: calc(100% - 20px);
+    width: 100%;
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+    transform: translateX(-50%) translateY(-50%);
+    transition: height .15s;
+  }
+  
+  .btn:hover {
+    border-width: 4px;
+    background: darkgreen;
+  }
+  .btn:hover:before, div:hover:after {border-width: 4px;}
+  
+  .btn:active {
+    border-width: 4px;
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+  }
+  .btn:active:before {width: 0;}
+  .btn:active:after {border-width: 4px;}
+  
+  
+  /*Button 2*/
+  .btn2 {
+    top: calc(50% + 75px);
+  }
+  .btn2:active:before {
+    width: calc(100% - 20px);
+  }
+  .btn2:active:after {
+    height: 0;
+  }
+  
+  /*Button 3*/
+  .btn3 {
+    top: calc(50% + 150px);
+  }
+  .btn3:active:before {width: 0;}
+  .btn3:active:after {height: 0;}
+  
+  
+  /* btn4 - btn small */
+  .btn.small {
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+  }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p class="attention">Enemy ships are still on our tail</p>
+<p class="attention2">we have no choice but to attack!!</p>
+<div class="container">
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="trigger"></div>
+  <div class="monitor">
+    <div class="opening">
+      <div class="camera o-x">
+        <div class="camera o-y">
+          <div class="camera o-z">
+            <div class="awing">
+              <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+              </div>
+              <div class="fly o-x">
+                <div class="fly o-y">
+                  <div class="fly o-z">
+                    <div class="free_bounce">
+                      <div class="free_rotate">
+                        <div class="body">
+                          <div class="cockpit">
+                            <div class="under"></div>
+                            <div class="back"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="edge_left"></div>
+                            <div class="edge_right"></div>
+                            <div class="boosts">
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                              <div class="boost"></div>
+                            </div>
+                          </div>
+                          <div class="wing_left">
+                            <div class="under"></div>
+                            <div class="back"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                          </div>
+                          <div class="wing_right">
+                            <div class="under"></div>
+                            <div class="back"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<div class="btn btn2" onclick="location.assign('../coming-soon')"><span>Attack zone<span></div>
+</body>
+</html>

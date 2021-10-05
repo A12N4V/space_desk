@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Space Desk</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap');
+
+body {
+	font-size: 10px;
+	font-family: 'Exo 2',sans-serif;
+	background: #000;
+}
+
+.title {
+	display: block;
+	position: absolute;
+	top: calc(50% - 225px);
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	text-shadow: 0 0 10px green;
+	user-select: none;
+	cursor: default;
+    font-size: 40px;
+}
+.title a {
+	color: white;
+	text-decoration: none;
+    
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 60px; width: 250px;
+	border: 1px solid white;
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+	text-transform: uppercase;
+	background: green;
+	cursor: pointer;
+	transition: all .15s;
+	user-select: none;
+}
+
+.btn:before {
+	position: absolute;
+	top: 50%; left: 50%;
+	content: '';
+	height: 100%;
+	width: calc(100% - 20px);
+	border-top: 4px solid #000;
+	border-bottom: 4px solid #000;
+	transform: translateX(-50%) translateY(-50%);
+	transition: width .15s;
+}
+.btn:after {
+	position: absolute;
+	top: 50%; left: 50%;
+	content: '';
+	height: calc(100% - 20px);
+	width: 100%;
+	border-left: 4px solid #000;
+	border-right: 4px solid #000;
+	transform: translateX(-50%) translateY(-50%);
+	transition: height .15s;
+}
+
+.btn:hover {
+	border-width: 4px;
+	background: darkgreen;
+}
+.btn:hover:before, div:hover:after {border-width: 4px;}
+
+.btn:active {
+	border-width: 4px;
+	transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
+.btn:active:before {width: 0;}
+.btn:active:after {border-width: 4px;}
+
+
+/*Button 2*/
+.btn2 {
+	top: calc(50% + 75px);
+}
+.btn2:active:before {
+	width: calc(100% - 20px);
+}
+.btn2:active:after {
+	height: 0;
+}
+
+/*Button 3*/
+.btn3 {
+	top: calc(50% + 150px);
+}
+.btn3:active:before {width: 0;}
+.btn3:active:after {height: 0;}
+
+
+/* btn4 - btn small */
+.btn.small {
+	height: 60px;
+	width: 60px;
+	font-size: 20px;
+}
+    </style>
+</head>
+<body>
+<div class="title">SPACE DESK</div>
+<div class="btn btn1" onclick="location.assign('./instructions.html')">Instructions</div>
+<div class="btn btn2" onclick="location.assign('http://github.com/A12N4V/space_desk')"><span>Source Code<span></div>
+<div class="btn btn3" onclick="location.assign('./r-mi-s-pop-up/scifi-stuff')">Initiate Sequence</a></div>
+</body>
+</html>
