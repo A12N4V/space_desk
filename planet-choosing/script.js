@@ -1,5 +1,5 @@
 // Show Sub-competence
-
+const visualise=[]
   $('.close-sub-modal').on('click', function () {
     $(this).parent().removeClass('sub-competence-modal');
     $('.carousel-control').css('display', 'block');
@@ -32,35 +32,11 @@
       // Prevent user to stop the ongoing animation
 
       if ($sub.hasClass('inactive')) {
-
-        // Sub already open
-        if ($sub.hasClass('open')) {
-
-          // Click from another point
-          if ($(this).siblings().hasClass('active')) {
-            $subText = $(this).siblings('.active').attr('data-sub-competence');
-            // Close and reopen with next text
-            subOpenClose($sub, $subText, $subTextNext).reverse(0);
-            $(this).addClass('active');
-            // Remove from others
-            $(this).siblings('.active').removeClass('active');
-          }
-          // Click from the same point - close the sub
-          else {
-            $sub.removeClass("open");
-            $(this).removeClass('active');
-            TweenMax.killTweensOf($sub.find('feGaussianBlur'));
-            subOpenClose($sub, $subText).reverse(0);
-          }
-        }
-        // Sub NOT already Open
-        else {
           $sub.addClass("open");
           $(this).addClass('active');
           subOpenClose($sub, $subText).resume();
+          visualise.push($(this).attr('data-sub-competence'))
         }
-      }
-  });
 
   function subOpenClose($sub, $subText, $subTextNext) {
     var tl = new TimelineLite({
@@ -137,3 +113,14 @@
 
     return tl;
   }
+  setInterval(() =>{
+    console.log(visualise)
+    if (visualise[visualise.length-1]==="#coed") {
+      location.assign('./visualisation/coed.html')
+    } else if (visualise[visualise.length-1]==="#dendro") {
+      location.assign('./visualisation/dendro.html')
+    } else if (visualise[visualise.length-1]==="#metaao") {
+      location.assign('./visualisation/metaao.html')
+    } 
+  },5000)
+});

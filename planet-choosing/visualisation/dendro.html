@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link type="text/css" rel="stylesheet" href="file:///Users/poojavasudev/Desktop/styles.css">
+  <link type="text/css" rel="stylesheet" href="styles.css">
 </head>
-<body class="opening hide-UI view-2D zoom-large data-close controls-close">
+<body onload="setInterval(() => {location.assign('../story/index.html')},30000) " class="opening hide-UI view-2D zoom-large data-close controls-close">
     <div id="navbar">
-      <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
+      <!--<a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>-->
       <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
     </div>
-    
+    <!--
     <div id="data">
       <a class="sun" title="sun" href="#sunspeed">Sun</a>
       <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
@@ -22,7 +22,7 @@
       <a class="uranus" title="uranus" href="#uranusspeed">Uranus</a>
       <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
     </div>
-  
+    -->
     <div id="controls">
       <label class="set-view">
         <input type="checkbox">
@@ -50,7 +50,7 @@
             <div class="pos">
               <div class="planet">
                 <dl class="infos">
-                  <dt>Mercury</dt>
+                  <dt>mercury</dt>
                   <dd><span></span></dd>
                 </dl>
               </div>
@@ -60,7 +60,7 @@
             <div class="pos">
               <div class="planet">
                 <dl class="infos">
-                  <dt>Venus</dt>
+                  <dt>venus</dt>
                   <dd><span></span></dd>
                 </dl>
               </div>
@@ -68,14 +68,9 @@
           </div>
           <div id="earth" class="orbit">
             <div class="pos">
-              <div class="orbit">
-                <div class="pos">
-                  <div class="moon"></div>
-                </div>
-              </div>
               <div class="planet">
                 <dl class="infos">
-                  <dt>Earth</dt>
+                  <dt>dendro</dt>
                   <dd><span></span></dd>
                 </dl>
               </div>
@@ -91,6 +86,7 @@
               </div>
             </div>
           </div>
+          <!--
           <div id="jupiter" class="orbit">
             <div class="pos">
               <div class="planet">
@@ -101,6 +97,7 @@
               </div>
             </div>
           </div>
+        -->
           <div id="saturn" class="orbit">
             <div class="pos">
               <div class="planet">
@@ -112,6 +109,7 @@
               </div>
             </div>
           </div>
+          <!--
           <div id="uranus" class="orbit">
             <div class="pos">
               <div class="planet">
@@ -122,6 +120,7 @@
               </div>
             </div>
           </div>
+        -->
           <div id="neptune" class="orbit">
             <div class="pos">
               <div class="planet">

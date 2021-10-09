@@ -640,7 +640,7 @@ body {
   content: '126,074 km/h'; }
 
 .set-speed #earth dl.infos dd:after {
-  content: '107,218 km/h'; }
+  content: '108 km/h'; }
 
 .set-speed #mars dl.infos dd:after {
   content: '86,677 km/h'; }
@@ -671,7 +671,7 @@ body {
   content: '38,024 km'; }
 
 .set-size #earth dl.infos dd:after {
-  content: '40,030 km'; }
+  content: '41,000 km'; }
 
 .set-size #mars dl.infos dd:after {
   content: '21,296 km'; }
@@ -705,7 +705,7 @@ body {
   content: '108,209,475 km'; }
 
 .set-distance #earth dl.infos dd:after {
-  content: '149,598,262 km'; }
+  content: '150,000,000 km'; }
 
 .set-distance #mars dl.infos dd:after {
   content: '227,943,824 km'; }
